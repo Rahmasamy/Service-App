@@ -1,52 +1,14 @@
+import { useState } from 'react';
 import './CommingSoon.css';
-
+import FormModal from '../features/formModal/FormModal';
+import Button from '../features/comming-soon/Button'
 export default function CommingSoonPage() {
+      const [isModalOpen, setModalOpen] = useState(false);
     return (
         <>
             <div className="coming-soon-page min-h-screen flex flex-col items-center justify-between text-center relative">
                 <div className="fisrstContainer ">
-                    {/* <div className="icons w-full flex flex-wrap relative ">
-                        <div className="icon w-1/2 z-10">
 
-                            <img src="assets/tasa.png" alt="tasa" width={"80px"} height={"80px"} />
-                            
-                        </div>
-                         <div className="icon w-1/2 flex justify-end z-10">
-
-                            <img src="assets/tasa.png" alt="tasa" width={"80px"} height={"80px"} />
-                            
-                        </div>
-                         <div className="icon w-1/3 z-10">
-
-                            <img src="assets/bndk.png" alt="tasa" width={"80px"} height={"80px"} />
-                            
-                        </div>
-                         <div className="icon w-1/3 flex justify-end z-10">
-
-                         
-
-                             {/* Content 
-                  
-                            
-                        </div>
-                         <div className="icon w-1/3 z-10 flex justify-end">
-
-                            <img src="assets/tasa.png" alt="tasa" width={"80px"} height={"80px"} />
-                            
-                        </div>
-                        <div className="icon w-1/2 z-10 end">
-
-                            <img src="assets/tasa.png" alt="tasa" width={"80px"} height={"80px"} />
-                            
-                        </div>
-                         <div className="icon w-1/2 flex justify-end z-10 end">
-
-                            <img src="assets/tasa.png" alt="tasa" width={"80px"} height={"80px"} />
-                            
-                        </div>
-                        
-                        
-                    </div> */}
                     <div className="absolute top-0 left-1/2 transform -translate-x-1/2 z-10 p-3">
                         <svg width="160" height="90" viewBox="0 0 190 104" fill="none" xmlns="http://www.w3.org/2000/svg"
 
@@ -62,8 +24,8 @@ export default function CommingSoonPage() {
                         className="first rounded absolute top-0 left-1/2 transform -translate-x-1/2 w-1/2 max-h-[300px] object-cover z-0"
                     />
                     {/* content */}
-                  
-   <div className=" w-full flex flex-col items-center  mt-20 relative z-10 py-3">
+
+                    <div className=" w-full flex flex-col items-center  mt-20 relative z-10 py-3">
                         <h1 className="text-3xl font-bold mt-4" style={{
                             color: 'white',
                             textShadow: "2px 2px 4px #1c7a80"
@@ -77,14 +39,9 @@ export default function CommingSoonPage() {
                             }}
                         >speciality coffee</p>
 
-                        <button className="mt-4 px-11 py-2 text-white rounded-full shadow-lg transition border-none outline-none"
-                            style={{ backgroundColor: "#1c7a80",
-                                    "boxShadow": "#1c7a80 0px 0px 15px 5px"
-                             }}>
-                            Get 25% Discount
-                        </button>
+                        <Button onClick={() => setModalOpen(true)}  />
                     </div>
-                   
+
                 </div>
 
                 {/* Middle Background Image */}
@@ -120,12 +77,7 @@ export default function CommingSoonPage() {
                 </h2>
 
                 {/* Bottom Button */}
-                <button className=" px-16 py-3 text-white rounded-full text-lg font-semibold transition relative z-10"
-                    style={{ backgroundColor: "#1c7a80",
-                          "boxShadow": "#1c7a80 0px 0px 15px 5px"
-                     }}>
-                    Get 25% Discount
-                </button>
+                <Button onClick={() => setModalOpen(true)} />
 
                 {/* Footer Text */}
                 <p className=" px-4 font-bold relative z-10" style={{ color: "#1c7a80", padding: "20px" }}>
@@ -137,6 +89,7 @@ export default function CommingSoonPage() {
                     Terms and Conditions apply.
                 </p>
             </div>
+             <FormModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
             <footer className="p-4 w-full  text-sm  text-white flex flex-col justify-center items-center gap-3"
                 style={{ backgroundColor: "#1c7a80" }}
             >

@@ -1,21 +1,11 @@
 
 .coming-soon-page .first {
-    /* border-radius: 50%;
-   background: radial-gradient(
-     
-        circle at center,
-        rgba(1, 115, 129, 0.29) 0%,
-        rgba(255, 210, 28, 0.5) 40%,
-        rgba(255, 236, 161, 0.5) 60%,
-        rgba(39, 155, 162, 0.36) 100%
-    ); */
+  
    background: linear-gradient(to bottom, rgb(3 111 118 / 68%) 0%, rgba(255, 210, 28, 0.705) 40%, rgba(255, 210, 28, 0.705) 40%, rgba(255, 255, 255, 0) 100%);
     width: 100%;
 
 }
-/* .secondcontainer {
-    margin-top: 100px;
-} */
+
 .secondcontainer .second {
      background: linear-gradient(
         to bottom,
